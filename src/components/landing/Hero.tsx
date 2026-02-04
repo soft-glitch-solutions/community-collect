@@ -36,19 +36,19 @@ const Hero = () => {
         </div>
 
         {/* Stats */}
-        <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-3 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+        <div className="mt-12 sm:mt-16 grid grid-cols-1 gap-4 sm:gap-6 md:gap-8 sm:grid-cols-3 w-full max-w-3xl animate-fade-in" style={{ animationDelay: "0.4s" }}>
           <StatCard
-            icon={<Users className="h-6 w-6" />}
+            icon={<Users className="h-5 w-5 sm:h-6 sm:w-6" />}
             value="Trust-Based"
             label="Personal Networks"
           />
           <StatCard
-            icon={<Recycle className="h-6 w-6" />}
+            icon={<Recycle className="h-5 w-5 sm:h-6 sm:w-6" />}
             value="Weekly"
             label="Scheduled Collections"
           />
           <StatCard
-            icon={<TrendingUp className="h-6 w-6" />}
+            icon={<TrendingUp className="h-5 w-5 sm:h-6 sm:w-6" />}
             value="Predictable"
             label="Estimated Earnings"
           />
@@ -56,9 +56,9 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="h-10 w-6 rounded-full border-2 border-primary-foreground/30 p-1">
-          <div className="h-2 w-1.5 rounded-full bg-primary-foreground/50 mx-auto animate-pulse" />
+      <div className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <div className="h-8 w-5 sm:h-10 sm:w-6 rounded-full border-2 border-primary-foreground/30 p-1">
+          <div className="h-1.5 w-1 sm:h-2 sm:w-1.5 rounded-full bg-primary-foreground/50 mx-auto animate-pulse" />
         </div>
       </div>
     </section>
@@ -75,12 +75,12 @@ const StatCard = ({
   label: string;
 }) => {
   return (
-    <div className="flex flex-col items-center gap-2 rounded-2xl bg-primary-foreground/10 p-6 backdrop-blur-sm">
-      <div className="rounded-full bg-primary-foreground/20 p-3 text-primary-foreground">
+    <div className="flex flex-col items-center gap-1.5 sm:gap-2 rounded-xl sm:rounded-2xl bg-primary-foreground/10 p-4 sm:p-6 backdrop-blur-sm">
+      <div className="rounded-full bg-primary-foreground/20 p-2 sm:p-3 text-primary-foreground">
         {icon}
       </div>
-      <span className="text-2xl font-bold text-primary-foreground">{value}</span>
-      <span className="text-sm text-primary-foreground/70">{label}</span>
+      <span className="text-xl sm:text-2xl font-bold text-primary-foreground">{value}</span>
+      <span className="text-xs sm:text-sm text-primary-foreground/70">{label}</span>
     </div>
   );
 };
