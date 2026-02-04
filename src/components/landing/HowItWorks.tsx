@@ -41,23 +41,23 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section className="py-24 bg-gradient-earth">
+    <section className="py-16 sm:py-20 lg:py-24 bg-gradient-earth">
       <div className="container px-4">
         {/* Section Header */}
-        <div className="mx-auto max-w-3xl text-center mb-16">
-          <span className="inline-block mb-4 text-sm font-semibold uppercase tracking-wider text-primary">
+        <div className="mx-auto max-w-3xl text-center mb-10 sm:mb-12 lg:mb-16">
+          <span className="inline-block mb-3 sm:mb-4 text-xs sm:text-sm font-semibold uppercase tracking-wider text-primary">
             How It Works
           </span>
-          <h2 className="text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
             From Signup to Steady Income
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="mt-3 sm:mt-4 text-base sm:text-lg text-muted-foreground px-2">
             Recoza organises community recycling into a predictable weekly routine using your existing social relationships.
           </p>
         </div>
 
         {/* Steps Grid */}
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
           {steps.map((step, index) => (
             <StepCard key={index} step={step} index={index} />
           ))}
@@ -78,24 +78,24 @@ const StepCard = ({
   
   return (
     <div 
-      className="group relative rounded-2xl bg-card p-8 shadow-card transition-all duration-300 hover:shadow-elevated hover:-translate-y-1"
+      className="group relative rounded-xl sm:rounded-2xl bg-card p-5 sm:p-6 lg:p-8 shadow-card transition-all duration-300 hover:shadow-elevated hover:-translate-y-1"
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       {/* Step Number */}
-      <div className="absolute -top-3 -left-3 flex h-8 w-8 items-center justify-center rounded-full bg-foreground text-sm font-bold text-background">
+      <div className="absolute -top-2.5 -left-2.5 sm:-top-3 sm:-left-3 flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-foreground text-xs sm:text-sm font-bold text-background">
         {index + 1}
       </div>
 
       {/* Icon */}
-      <div className={`mb-6 inline-flex rounded-xl ${step.color} p-4 text-primary-foreground`}>
-        <Icon className="h-6 w-6" />
+      <div className={`mb-4 sm:mb-6 inline-flex rounded-lg sm:rounded-xl ${step.color} p-3 sm:p-4 text-primary-foreground`}>
+        <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
       </div>
 
       {/* Content */}
-      <h3 className="mb-3 text-xl font-bold text-foreground">
+      <h3 className="mb-2 sm:mb-3 text-lg sm:text-xl font-bold text-foreground">
         {step.title}
       </h3>
-      <p className="text-muted-foreground leading-relaxed">
+      <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
         {step.description}
       </p>
     </div>
