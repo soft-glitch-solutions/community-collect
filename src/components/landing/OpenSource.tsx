@@ -78,13 +78,13 @@ const InfoCard = ({
   description: string;
 }) => {
   return (
-    <div className="flex gap-4 rounded-xl bg-muted p-5">
-      <div className="flex-shrink-0 rounded-lg bg-primary p-2.5 text-primary-foreground">
+    <div className="flex gap-3 sm:gap-4 rounded-lg sm:rounded-xl bg-muted p-4 sm:p-5">
+      <div className="flex-shrink-0 rounded-md sm:rounded-lg bg-primary p-2 sm:p-2.5 text-primary-foreground">
         {icon}
       </div>
       <div>
-        <h4 className="font-semibold text-foreground">{title}</h4>
-        <p className="text-sm text-muted-foreground">{description}</p>
+        <h4 className="text-sm sm:text-base font-semibold text-foreground">{title}</h4>
+        <p className="text-xs sm:text-sm text-muted-foreground">{description}</p>
       </div>
     </div>
   );

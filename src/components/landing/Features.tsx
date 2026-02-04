@@ -134,13 +134,13 @@ const FeatureItem = ({
   const Icon = feature.icon;
   
   return (
-    <div className="group flex gap-4 rounded-xl bg-card p-5 shadow-soft transition-all duration-200 hover:shadow-card">
-      <div className="flex-shrink-0 rounded-lg bg-muted p-2.5 text-foreground transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-        <Icon className="h-5 w-5" />
+    <div className="group flex gap-3 sm:gap-4 rounded-lg sm:rounded-xl bg-card p-4 sm:p-5 shadow-soft transition-all duration-200 hover:shadow-card">
+      <div className="flex-shrink-0 rounded-md sm:rounded-lg bg-muted p-2 sm:p-2.5 text-foreground transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+        <Icon className="h-4 w-4 sm:h-5 sm:w-5" />
       </div>
       <div>
-        <h4 className="font-semibold text-foreground">{feature.title}</h4>
-        <p className="text-sm text-muted-foreground">{feature.description}</p>
+        <h4 className="text-sm sm:text-base font-semibold text-foreground">{feature.title}</h4>
+        <p className="text-xs sm:text-sm text-muted-foreground">{feature.description}</p>
       </div>
     </div>
   );
