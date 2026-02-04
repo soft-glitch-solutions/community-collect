@@ -41,23 +41,23 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section className="py-24 bg-gradient-earth">
+    <section className="py-16 sm:py-20 lg:py-24 bg-gradient-earth">
       <div className="container px-4">
         {/* Section Header */}
-        <div className="mx-auto max-w-3xl text-center mb-16">
-          <span className="inline-block mb-4 text-sm font-semibold uppercase tracking-wider text-primary">
+        <div className="mx-auto max-w-3xl text-center mb-10 sm:mb-12 lg:mb-16">
+          <span className="inline-block mb-3 sm:mb-4 text-xs sm:text-sm font-semibold uppercase tracking-wider text-primary">
             How It Works
           </span>
-          <h2 className="text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
             From Signup to Steady Income
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="mt-3 sm:mt-4 text-base sm:text-lg text-muted-foreground px-2">
             Recoza organises community recycling into a predictable weekly routine using your existing social relationships.
           </p>
         </div>
 
         {/* Steps Grid */}
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
           {steps.map((step, index) => (
             <StepCard key={index} step={step} index={index} />
           ))}
