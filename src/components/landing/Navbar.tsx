@@ -61,6 +61,13 @@ const Navbar = () => {
           <div className="md:hidden py-4 border-t border-border/50">
             <div className="flex flex-col gap-4">
               <a 
+                href="#background" 
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
+                onClick={() => setIsOpen(false)}
+              >
+                About
+              </a>
+              <a 
                 href="#how-it-works" 
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
                 onClick={() => setIsOpen(false)}
