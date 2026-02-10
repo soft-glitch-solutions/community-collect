@@ -1,14 +1,18 @@
 import { Recycle, Users, TrendingUp } from "lucide-react";
 import { AppStoreBadges } from "./AppStoreBadges";
+import heroImage from "@/assets/hero-recycling.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-gradient-hero">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 left-5 w-48 h-48 sm:top-20 sm:left-10 sm:w-72 sm:h-72 rounded-full bg-primary-foreground blur-3xl animate-float" />
-        <div className="absolute bottom-10 right-5 w-64 h-64 sm:bottom-20 sm:right-10 sm:w-96 sm:h-96 rounded-full bg-primary-foreground blur-3xl animate-float-delayed" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] sm:w-[600px] sm:h-[600px] rounded-full bg-primary-foreground blur-3xl opacity-20" />
+    <section className="relative min-h-screen overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img
+          src={heroImage}
+          alt="South African community recycling collection"
+          className="h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-foreground/80 via-foreground/70 to-foreground/90" />
       </div>
 
       {/* Main Content */}
