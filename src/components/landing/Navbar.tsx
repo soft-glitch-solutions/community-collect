@@ -18,7 +18,10 @@ const Navbar = () => {
           </a>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6 lg:gap-8">
+            <a href="#background" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+              About
+            </a>
             <a href="#how-it-works" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
               How It Works
             </a>
