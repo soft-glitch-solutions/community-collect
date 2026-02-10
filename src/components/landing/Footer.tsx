@@ -82,7 +82,7 @@ const Footer = () => {
             © {new Date().getFullYear()} Recoza. Open source, not-for-profit.
           </p>
           <p className="text-xs sm:text-sm text-background/60">
-            Built with Flutter & Firebase
+            Built with React Native & Supabase · Funded by SoftGlitch Solutions
           </p>
         </div>
       </div>
