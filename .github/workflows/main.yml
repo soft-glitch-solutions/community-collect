@@ -35,3 +35,4 @@ jobs:
           local-dir: dist/  # This is your build directory
           server-dir: /public_html/  # Change this if needed
           dangerous-clean-slate: true
+          
