@@ -17,11 +17,6 @@ const storeConfig = {
     alt: "Get it on Google Play",
     href: "#",
   },
-  huawei: {
-    icon: "/assets/huawei-appgallery-icon.svg", // You'll need to add this icon
-    alt: "Explore it on AppGallery",
-    href: "#",
-  },
 };
 
 export const AppStoreBadge = ({ store, className = "" }: AppStoreBadgeProps) => {
