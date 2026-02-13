@@ -11,9 +11,7 @@ const Navbar = () => {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <a href="/" className="flex items-center gap-2.5">
-            <div className="rounded-lg bg-gradient-hero p-2">
-              <Recycle className="h-5 w-5 text-primary-foreground" />
-            </div>
+              ♻️
             <span className="text-xl font-bold text-foreground">Recoza</span>
           </a>
 
