@@ -1,5 +1,5 @@
 interface AppStoreBadgeProps {
-  store: "apple" | "google" | "huawei";
+  store: "apple" | "google" 
   className?: string;
 }
 
@@ -17,6 +17,7 @@ const storeConfig = {
     alt: "Get it on Google Play",
     href: "#",
   },
+
 };
 
 export const AppStoreBadge = ({ store, className = "" }: AppStoreBadgeProps) => {
@@ -43,7 +44,6 @@ export const AppStoreBadges = () => {
     <div className="flex flex-col items-center gap-3 sm:flex-row sm:gap-4">
       <AppStoreBadge store="google" />
       <AppStoreBadge store="apple" />
-      <AppStoreBadge store="huawei" />
     </div>
   );
 };
