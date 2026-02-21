@@ -29,6 +29,9 @@ const Navbar = () => {
             <a href="#open-source" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
               Open Source
             </a>
+            <a href="/media" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+              Media Kit
+            </a>
             <a href="/admin/login" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
               Support Portal
             </a>
@@ -88,6 +91,13 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
               >
                 Open Source
+              </a>
+              <a 
+                href="/media" 
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
+                onClick={() => setIsOpen(false)}
+              >
+                Media Kit
               </a>
               <a 
                 href="/admin/login" 
