@@ -29,6 +29,9 @@ const Navbar = () => {
             <a href="#open-source" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
               Open Source
             </a>
+            <a href="/admin/login" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+              Support Portal
+            </a>
           </div>
 
           {/* Desktop CTA */}
@@ -85,6 +88,13 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
               >
                 Open Source
+              </a>
+              <a 
+                href="/admin/login" 
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
+                onClick={() => setIsOpen(false)}
+              >
+                Support Portal
               </a>
               <div className="flex flex-col gap-2 pt-4 border-t border-border/50">
                 <Button variant="outline" size="sm" asChild>
