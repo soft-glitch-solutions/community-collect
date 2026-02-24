@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Recycle, Menu, X, Github } from "lucide-react";
+import { Menu, X, Github } from "lucide-react";
+import Recozalogo from "@/assets/Recoza_logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +12,11 @@ const Navbar = () => {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <a href="/" className="flex items-center gap-2.5">
-              ♻️
+            <img 
+              src={Recozalogo} 
+              alt="Recoza Logo" 
+              className="h-8 w-auto" // Adjust size as needed
+            />
             <span className="text-xl font-bold text-foreground">Recoza</span>
           </a>
 
@@ -40,7 +45,7 @@ const Navbar = () => {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-3">
             <Button variant="ghost" size="sm" asChild>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/soft-glitch-solutions/recoza" target="_blank" rel="noopener noreferrer">
                 <Github className="h-4 w-4" />
                 GitHub
               </a>
@@ -108,7 +113,7 @@ const Navbar = () => {
               </a>
               <div className="flex flex-col gap-2 pt-4 border-t border-border/50">
                 <Button variant="outline" size="sm" asChild>
-                  <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/soft-glitch-solutions/recoza" target="_blank" rel="noopener noreferrer">
                     <Github className="h-4 w-4" />
                     View on GitHub
                   </a>
