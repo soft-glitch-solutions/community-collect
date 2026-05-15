@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
   Users, ClipboardList, Recycle, LogOut, Shield, Clock,
-  CheckCircle, XCircle, Loader2, ArrowRight
+  CheckCircle, XCircle, Loader2, ArrowRight, FileSpreadsheet, Truck
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { formatDistanceToNow } from "date-fns";
@@ -100,6 +100,30 @@ const AdminDashboard = () => {
                 </div>
               </CardContent>
             </Card>
+          ))}
+        </div>
+
+        {/* Quick links */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {[
+            { to: "/admin/users", label: "Manage Users", icon: Users },
+            { to: "/admin/applications", label: "Applications", icon: ClipboardList },
+            { to: "/admin/collections", label: "Collections", icon: Truck },
+            { to: "/admin/reports", label: "Reports & Exports", icon: FileSpreadsheet },
+          ].map((q) => (
+            <Link key={q.to} to={q.to}>
+              <Card className="shadow-soft hover:shadow-md transition-shadow cursor-pointer h-full">
+                <CardContent className="p-5 flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <q.icon className="h-5 w-5 text-primary" />
+                    </div>
+                    <span className="font-medium text-foreground">{q.label}</span>
+                  </div>
+                  <ArrowRight className="h-4 w-4 text-muted-foreground" />
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
 
