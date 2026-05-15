@@ -1,10 +1,12 @@
 interface AppStoreBadgeProps {
-  store: "apple" | "google" 
+  store: "apple" | "google" | "huawei" | "web"
   className?: string;
 }
 
 import Applogo from "@/assets/app-store-icon.svg";
 import Playlogo from "@/assets/google-play-icon.svg";
+import Huaweilogo from "@/assets/huawei-appgallery-icon.svg";
+import Webligo from "@/assets/web-app-icon.svg";
 
 const storeConfig = {
   apple: {
@@ -13,11 +15,20 @@ const storeConfig = {
     href: "#",
   },
   google: {
-    icon: Playlogo, 
+    icon: Playlogo,
     alt: "Get it on Google Play",
     href: "#",
   },
-
+  huawei: {
+    icon: Huaweilogo,
+    alt: "Get it on AppGallery",
+    href: "#",
+  },
+  web: {
+    icon: Webligo,
+    alt: "Use the Web App",
+    href: "#",
+  },
 };
 
 export const AppStoreBadge = ({ store, className = "" }: AppStoreBadgeProps) => {
@@ -30,10 +41,10 @@ export const AppStoreBadge = ({ store, className = "" }: AppStoreBadgeProps) => 
       rel="noopener noreferrer"
       className={`inline-block transition-all duration-200 hover:scale-105 active:scale-95 ${className}`}
     >
-      <img 
-        src={config.icon} 
+      <img
+        src={config.icon}
         alt={config.alt}
-        className="h-40 w-auto sm:h-42" // Adjust size as needed
+        className="h-40 w-auto sm:h-42"
       />
     </a>
   );
@@ -41,9 +52,11 @@ export const AppStoreBadge = ({ store, className = "" }: AppStoreBadgeProps) => 
 
 export const AppStoreBadges = () => {
   return (
-    <div className="flex flex-col items-center gap-3 sm:flex-row sm:gap-4">
+    <div className="flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4">
       <AppStoreBadge store="google" />
       <AppStoreBadge store="apple" />
+      <AppStoreBadge store="huawei" />
+      <AppStoreBadge store="web" />
     </div>
   );
 };
