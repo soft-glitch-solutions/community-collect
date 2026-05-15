@@ -109,6 +109,45 @@ export type Database = {
           },
         ]
       }
+      household_connections: {
+        Row: {
+          collector_id: string
+          created_at: string
+          household_id: string
+          id: string
+          status: string
+        }
+        Insert: {
+          collector_id: string
+          created_at?: string
+          household_id: string
+          id?: string
+          status?: string
+        }
+        Update: {
+          collector_id?: string
+          created_at?: string
+          household_id?: string
+          id?: string
+          status?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "household_connections_collector_id_fkey"
+            columns: ["collector_id"]
+            isOneToOne: false
+            referencedRelation: "user_profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "household_connections_household_id_fkey"
+            columns: ["household_id"]
+            isOneToOne: false
+            referencedRelation: "user_profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       logged_items: {
         Row: {
           collected: boolean | null
