@@ -37,6 +37,9 @@ const Navbar = () => {
             <a href="/media" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
               Media Kit
             </a>
+            <a href="/help" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+              Help
+            </a>
             <a href="/admin/login" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
               Support Portal
             </a>
@@ -103,6 +106,13 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
               >
                 Media Kit
+              </a>
+              <a 
+                href="/help" 
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
+                onClick={() => setIsOpen(false)}
+              >
+                Help
               </a>
               <a 
                 href="/admin/login" 

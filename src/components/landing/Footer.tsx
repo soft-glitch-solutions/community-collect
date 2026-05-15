@@ -43,6 +43,11 @@ const Footer = () => {
                 </a>
               </li>
               <li>
+                <a href="/help" className="text-sm sm:text-base text-background/70 hover:text-background transition-colors">
+                  Help & Support
+                </a>
+              </li>
+              <li>
                 <a href="#donate" className="text-sm sm:text-base text-background/70 hover:text-background transition-colors">
                   Donate
                 </a>
