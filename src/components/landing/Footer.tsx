@@ -76,8 +76,21 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Legal Links */}
+        <div className="mt-10 sm:mt-12 lg:mt-16 border-t border-background/10 pt-6 sm:pt-8 flex flex-wrap justify-center sm:justify-start gap-x-6 gap-y-2">
+          <a href="/terms" className="text-xs sm:text-sm text-background/70 hover:text-background transition-colors">
+            Terms & Conditions
+          </a>
+          <a href="/privacy" className="text-xs sm:text-sm text-background/70 hover:text-background transition-colors">
+            Privacy Policy
+          </a>
+          <a href="/delete-account" className="text-xs sm:text-sm text-background/70 hover:text-background transition-colors">
+            Delete Account
+          </a>
+        </div>
+
         {/* Bottom Bar */}
-        <div className="mt-10 sm:mt-12 lg:mt-16 border-t border-background/10 pt-6 sm:pt-8 flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
+        <div className="mt-6 border-t border-background/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
           <p className="text-xs sm:text-sm text-background/60 text-center sm:text-left">
             © {new Date().getFullYear()} Recoza. Open source, not-for-profit.
           </p>
